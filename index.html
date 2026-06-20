@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Filter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="contenedor-principal">
+        <!-- filtros -->
+        <div class="contenedor-filtros" id="filtros">
+            <div class="contenedor-input">
+                <i class="bx bx-search"></i>
+                <input type="text" name="search" id="search" placeholder="Búsqueda">
+            </div>
+
+            <div class="contenedor-botones" id="botones">
+                <button class="btn active" data-filtro="todo">Todo</button>
+                <button class="btn" data-filtro="peliculas">Peliculas</button>
+                <button class="btn" data-filtro="series">Series</button>
+                <button class="btn" data-filtro="videojuegos">Videojuegos</button>
+            </div>
+        </div>
+
+        <!-- contenedor cards -->
+        <div class="contenedor-cards" id="contenedor-cards">
+
+            <!-- peliculas -->
+            <div class="card" data-categoria="peliculas" data-nombre="deadpool & wolverine">
+                <div class="card__info">
+                    <img src="img/movie1.jfif" alt="Deadpool 3">
+                    <h6>Deadpool & Wolverine</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <span>4/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Deadpool y Wolverine forman un dúo irreverente para enfrentarse a un peligro que pone a
+                            prueba su moral y su forma de pelear; mezcla acción brutal y comedia meta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="peliculas" data-nombre="insideout">
+                <div class="card__info">
+                    <img src="img/movie2.jfif" alt="insideout">
+                    <h6>Insideout 2</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Riley enfrenta nuevos cambios emocionales; sus emociones deben aprender a adaptarse mientras ella
+                            crece.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="peliculas" data-nombre="avengers end game">
+                <div class="card__info">
+                    <img src="img/movie3.jfif" alt="avengers">
+                    <h6>Avengers</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Los héroes se reúnen para detener una amenaza cósmica que pone en riesgo al planeta y su propia
+                            unión.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="peliculas" data-nombre="joker">
+                <div class="card__info">
+                    <img src="img/movie4.jfif" alt="joker">
+                    <h6>Joker</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Un retrato oscuro del descenso psicológico de un hombre marginado hacia la violencia.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-categoria="peliculas" data-nombre="super mario bros la pelicula">
+                <div class="card__info">
+                    <img src="img/movie5.jfif" alt="">
+                    <h6>Super Mario Bros</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <span>3/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Mario viaja por mundos extraños para rescatar a sus amigos y derrotar a Bowser en una aventura
+                            colorida.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="peliculas" data-nombre="dr strange">
+                <div class="card__info">
+                    <img src="img/movie6.jfif" alt="dr strange">
+                    <h6>Dr Strange</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <span>4/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Un médico descubre las artes místicas y viaja por dimensiones para proteger la realidad de
+                            amenazas sobrenaturales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series -->
+            <div class="card" data-categoria="series" data-nombre="house of dragon">
+                <div class="card__info">
+                    <img src="img/series1.jfif" alt="house of dragon">
+                    <h6>House of dragon</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <span>4/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Precuela de luchas dinásticas Targaryen: intriga política, dragones y una guerra por el trono que
+                            fractura familias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="series" data-nombre="Ted lasso">
+                <div class="card__info">
+                    <img src="img/series2.jfif" alt="Lasso">
+                    <h6>Ted Lasso</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Comedia dramática sobre un entrenador optimista que transforma a un equipo con empatía y humor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="series" data-nombre="breaking bad">
+                <div class="card__info">
+                    <img src="img/series3.jfif" alt="BB">
+                    <h6>Breaking Bad</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Un profesor de química se convierte en capo de la metanfetamina, en una espiral de poder, culpa y
+                            consecuencias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="series" data-nombre="game of thrones">
+                <div class="card__info">
+                    <img src="img/series4.jfif" alt="game of thrones">
+                    <h6>Game of thrones</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <span>4/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Grandes casas luchan por el poder en un mundo medieval donde las alianzas cambian y el invierno
+                            acecha.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="series" data-nombre="better call saul">
+                <div class="card__info">
+                    <img src="img/series5.jfif" alt="better call saul">
+                    <h6>Better Call Saul</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>La historia de Jimmy McGill y su transformación ética en el abogado Saul Goodman.</p>
+                    </div>
+                </div>
+
+  </div>              <!-- Videojuegos -->
+            <div class="card" data-categoria="videojuegos" data-nombre="the legend of zelda breath of the wild">
+                <div class="card__info">
+                    <img src="img/videogame1.jfif" alt="BOW">
+                    <h6>The legend of zelda breath of the wild</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Link despierta en Hyrule para recuperar la paz y derrotar a las fuerzas que amenazan el reino en
+                            una aventura de mundo abierto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="videojuegos" data-nombre="assassins creed shadows">
+                <div class="card__info">
+                    <img src="img/videogame2.jfif" alt="ACShadows">
+                    <h6>Assassins creed shadows</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <span>4/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Un asesino enfrenta conspiraciones en escenarios históricos, combinando sigilo, parkour y
+                            venganza.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="videojuegos" data-nombre="god of war">
+                <div class="card__info">
+                    <img src="img/videogame3.jfif" alt="GOW">
+                    <h6>God of war</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Kratos y su hijo viajan por mitologías y paisajes hostiles, enfrentando dioses y sus propios
+                            demonios.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="videojuegos" data-nombre="super mario odissey">
+                <div class="card__info">
+                    <img src="img/videogame4.jfif" alt="odissey">
+                    <h6>Super Mario Odissey</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Mario viaja con Cappy por reinos creativos para rescatar a Peach en una aventura de plataformas
+                            llena de imaginación.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="videojuegos" data-nombre="mario kart">
+                <div class="card__info">
+                    <img src="img/videogame5.jfif" alt="mario kart">
+                    <h6>Mario Kart</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <span>4/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Carreras arcade llenas de ítems y circuitos locos; diversión multijugador con amigos o IA.</p>
+                    </div>
+                </div>
+
+  </div>              <div class="card" data-categoria="videojuegos" data-nombre="red dead redemption 2">
+                <div class="card__info">
+                    <img src="img/videogame6.jfif" alt="RDR2">
+                    <h6>Red dead redemption 2</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Épica narrativa del Lejano Oeste sobre una banda en declive, lealtades rotas y búsqueda de
+                            redención.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-categoria="videojuegos" data-nombre="ghost of tsusima">
+                <div class="card__info">
+                    <img src="img/videogame7.jfif" alt="GOT">
+                    <h6>Ghost of Tsusima</h6>
+                    <div class="rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span>5/5</span>
+                    </div>
+                    <div class="info">
+                        <p>Jin Sakai lucha para defender Tsushima contra la invasión, explorando el honor samurái y tácticas
+                            guerrilleras.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
