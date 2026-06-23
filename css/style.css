@@ -105,6 +105,10 @@ body{
     gap: 10px;
 }
 
+.contenedor-cards .card.hide{
+    display: none;
+}
+
 
 .card{
     position: relative;
@@ -120,17 +124,24 @@ body{
 .card__info::before{
     content:'';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgb(0,0,0) 60%, transparent);
-    opacity: 0.3;  
-    transition: all .5s;
-    z-index: 1;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.3),
+        transparent
+    );
+    opacity: 1;
+    transition: .4s;
 }
 
 .card:hover .card__info::before{
-    opacity: 1;  
-
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.6),
+        transparent
+    );
 }
 
 .card__info{
@@ -144,18 +155,19 @@ body{
     justify-content: center;
     align-items: flex-start;
     gap: 5px;
-    
+    padding-bottom: 10px;
     transition: all .5s;
 }
 
 .card:hover .card__info {
     transform: translateY(-100px);
 }
+
+
 .card .card__info img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-
     object-position: center top;
     z-index: 0;
     transition: .5s;
