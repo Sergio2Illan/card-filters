@@ -1,7 +1,54 @@
-const buttons = document.querySelectorAll('#botones button');
-const cards = document.querySelectorAll('.card');
-const input = document.querySelector('.contenedor-input input')
+import {data} from './data.js';
 
+const buttons = document.querySelectorAll('#botones button');
+const input = document.querySelector('.contenedor-input input')
+const cardsContent = document.querySelector('#contenedor-cards');
+
+// Modal
+const modal = document.getElementById('modal');
+const imgModal = document.getElementById('img-modal');
+const closeBtn = document.getElementById('close');
+
+
+// load cards
+window.addEventListener('load', () =>  {
+
+    const randomData = data.sort(()=>{
+        return Math.random() - 0.5;
+    });
+    
+    const createCards = (randomData) => {
+
+        let cardHtml = '';
+        randomData.forEach(card => {
+            cardHtml += 
+            `
+                <div class="card" data-categoria="${card.category}" data-nombre="${card.name}">
+                    <div class="card__info">
+                        <img src="${card.img}" alt="${card.name}">
+                        <h6>${card.name}</h6>
+                        <div class="rating">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <span>${card.rating}</span>
+                        </div>
+                        <div class="info">
+                            <p>${card.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `
+        });
+        return cardHtml;
+    };
+
+    cardsContent.innerHTML = createCards(randomData);
+})
+
+// Filters
 
 const combinedFilters = (e) =>{
     if(e.type === "click"){
@@ -9,6 +56,7 @@ const combinedFilters = (e) =>{
         e.target.classList.add('active')
     }
     
+    const cards = document.querySelectorAll('.card');
     const inputValue = input.value.toLowerCase() || '';
     const filtro = document.querySelector('#botones .active').dataset.filtro;
 
@@ -26,6 +74,22 @@ const combinedFilters = (e) =>{
     })
 }
 
+// Modal funtion
+
+const openModal = (e) =>{
+    const card = e.target.closest('.card');
+    if(!card) return;
+
+    const img = card.querySelector('img');
+
+
+    imgModal.src = img.src;
+    modal.style.display = 'block';
+
+};
+
+const closeModal = () => modal.style.display = 'none';
+
 
 // EVENTS
 buttons.forEach(btn =>{
@@ -33,6 +97,11 @@ buttons.forEach(btn =>{
 });
 
 input.addEventListener('keyup', combinedFilters)
+
+cardsContent.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+
+
 
 
 // const filtroCategorias = (e) => {
